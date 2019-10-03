@@ -1,0 +1,28 @@
+<div class="content-post">
+  <ul class="box">
+    <p><%=article.title%></p>
+   <h2><%=article.content %></h2>
+   <span class = "name">
+    <a href="/users/<%= article.user_id %>">
+      <span>投稿者:</span><%= article.user.nickname %>
+      </a>
+      </span>
+     <p><%= article.created_at %></p>
+    </ul>
+     <li>
+      <div class="more">
+        <ul class = "more_list">
+          <li>
+            <%=link_to "詳細", "/articles/#{article.id}", method: :get %>
+              </li>
+                 <% if user_signed_in? && current_user.id == article.user_id %>
+               <li>
+                  <%= link_to '削除', "/articles/#{article.id}", method: :delete %>
+               </li>
+           <li>
+            <%= link_to "編集", "articles/#{article.id}/edit", method: :get %>
+         </ul>
+     </div>
+  <% end %>
+ </div>
+

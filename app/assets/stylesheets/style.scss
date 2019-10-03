@@ -1,0 +1,32 @@
+body, html{
+  height: 100%;
+  background-color: white;
+  padding:0 20px 10px 20px;
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,body {
+  line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 16px
+}
+
+.header, .header a{
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  background-color: gainsboro;
+  text-align: center;
+}
+
+.box{
+  border: 1px solid rgb(2, 2, 20);
+  border-radius: 5px;
+  margin: 5rem 0 1rem 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color:lightseagreen;
+}

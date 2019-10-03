@@ -1,0 +1,8 @@
+<div class="contents row">
+  <%=form_tag("/articles/#{@article.id}", method: :patch ) do%>
+    <h3>編集する</h3>
+     <p><input type="text" name="title" placeholder="タイトル"></p>
+      <textarea name="content" placeholder = "文章を入力してください"  rows="10" cols="50"></textarea> 
+     <p><input type="submit" value="投稿！"></p>
+  <% end %>
+</div>

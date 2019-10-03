@@ -1,0 +1,19 @@
+<div class = "conrents row">
+  <% if user_signed_in? && current_user.id == @article.user_id %>
+    <ul class= "more_list">
+      <li>
+        <%= link_to "編集", "/articless/#{@article.id}/edit", method: :get %>
+      </li>
+      <li>
+        <%= link_to "削除", "/articles/#{@article.id}", method: :delete %>
+      </li>
+    </ul>
+<% end %>
+<%= simple_format(@article.title)%>
+<%= simple_format(@article.content)%>
+<span class="name">
+  <a href="/users/<%= @article.user.id %>">
+  <span>投稿者</span><%= @article.user.nickname %>
+  </a>
+</span>
+</div>
